@@ -2,13 +2,27 @@
 // оператор switch, выведите в консоль описание оценки (например, "Отлично",
 // "Хорошо" и т.д.) в зависимости от значения переменной grade.
 
-const grade:number = +prompt();
+const grade: number = +prompt();
 
 switch (grade) {
-    case grade===1:
-        
-        break;
+    case 1:
+        console.log('Отвратительно');
 
-    default:
+        break;
+    case 2:
+        console.log('Плохо');
+
+        break;
+    case 3:
+        console.log('Удовлетварительно');
+
+        break;
+    case 4:
+        console.log('Хорошо');
+
+        break;
+        case 5:
+        console.log('Отлично');
+
         break;
 }

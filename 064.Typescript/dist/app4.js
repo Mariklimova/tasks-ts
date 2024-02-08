@@ -3,8 +3,19 @@
 // "Хорошо" и т.д.) в зависимости от значения переменной grade.
 const grade = +prompt();
 switch (grade) {
-    case grade === 1:
+    case 1:
+        console.log('Отвратительно');
         break;
-    default:
+    case 2:
+        console.log('Плохо');
+        break;
+    case 3:
+        console.log('Удовлетварительно');
+        break;
+    case 4:
+        console.log('Хорошо');
+        break;
+    case 5:
+        console.log('Отлично');
         break;
 }

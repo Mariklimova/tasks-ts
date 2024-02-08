@@ -1,7 +1,7 @@
 // 1. Напишите программу, которая проверяет, является ли заданное число num
 // четным или нечетным.
-const num = +prompt();
-if (num % 2 === 0) {
+const number = +prompt();
+if (number % 2 === 0) {
     console.log('четное');
 }
 else {
