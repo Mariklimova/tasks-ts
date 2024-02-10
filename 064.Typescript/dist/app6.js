@@ -1,7 +1,9 @@
-const polindrom = 'казак';
+// 6. Напишите программу, которая проверяет, является ли заданная строка
+// палиндромом.
+const polindrom = prompt();
 if (polindrom.split('').reverse().join('') === polindrom) {
-    console.log('polindrom');
+    console.log(`${polindrom} - polindrom`);
 }
 else {
-    console.log('nepolindrom');
+    console.log(`${polindrom} - ne polindrom`);
 }

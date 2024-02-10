@@ -1,8 +1,11 @@
-const str: string = 'gvjkjkkjvghdr';
+// 7. Напишите программу, которая находит факториал заданного числа num и
+// выводит результат в консоль
 
-for (let i = 0; i < str.length; i++) {
-   if ((i-1)%2===0) {
-    
-   }
+const num_7: number = +prompt();
+let fact: number = 1;
+
+for (let i = 1; i <= num_7; i++) {
+    fact *= i;
 
 }
+console.log(fact);
