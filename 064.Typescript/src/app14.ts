@@ -1,6 +1,8 @@
+// 14. Напишите программу, которая удаляет все пробелы из заданной строки и
+// выводит результат.
 
 
-let strOfNums: string = prompt();
+const : string = prompt();
 for (let char of object) {
     
 }

@@ -4,11 +4,15 @@
 // world" результатом должна быть строка "Hello World".
 
 
-const sentence: string []= prompt().split(' ');
+const sentence: string[] = prompt().split(' ');
+
+let resStr: string = '';
 
 for (let i = 0; i < sentence.length; i++) {
-    let myWord = '';
-   let word:string = sentence[i];
-    
-   let myWord = word[0].toLocaleUpperCase().slice(1,word.length)
+    let word: string = sentence[i];
+    let resWord = word[0].toUpperCase() + word.slice(1, word.length);
+    resStr += resWord + ' ';
+
 }
+
+console.log(resStr.trim());
