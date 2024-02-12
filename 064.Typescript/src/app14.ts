@@ -2,7 +2,7 @@
 // выводит результат.
 
 
-const : string = prompt();
-for (let char of object) {
-    
-}
+const str_14: string = prompt();
+const resultStr = str_14.replaceAll(' ', '');
+
+console.log(resultStr);
