@@ -5,23 +5,24 @@
 
 
 
-const str_15: string = 'Hello World'.trim();
+const str_15: string[] = 'Hello World rgerhteht aqwrfwewrh'.trim().split(' ');
 let resStr_15: string = '';
-const newStr_15 = str_15.split('').reverse().join('')
-console.log(newStr_15);
 
-for (let i = 0; i < newStr_15.length; i++) {
 
-    console.log(newStr_15[i][i][0]);
-    
+for (let i = 0; i < str_15.length; i++) {
+
+    const lastInd = str_15[i].length - 1;
+
     // const index = str_15.lastIndexOf(' ') - 1;
     // const index = str_15.lastIndexOf(str_15[i][i]);
     // console.log(index);
-    
-    // resStr_15 +=newStr_15[0][0]
 
+    resStr_15 += str_15[lastInd] + ' '
+
+    console.log(lastInd);
 }
 // console.log(str_15);
 
-// console.log(resStr_15);
+console.log(resStr_15);
+
 
