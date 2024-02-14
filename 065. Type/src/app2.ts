@@ -19,7 +19,7 @@ console.log(res_2);
 
 // 2
 
-const result_2 = arr_2.filter(function(el){
+const result_2 = arr_2.filter(function (el) {
     return el.includes('a')
 })
 

@@ -11,5 +11,5 @@ for (let i = 0; i < num_12; i++) {
 }
 
 const res_12 = arr_12.filter(function (el) {
-   return arr_12[el % 2 == 0)]
+   return el % 2 == 0
 })

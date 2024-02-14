@@ -12,3 +12,7 @@ for (let i = 0; i < arr_1.length; i++) {
 }
 
 console.log(sum);
+
+
+
+
