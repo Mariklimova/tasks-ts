@@ -3,14 +3,9 @@
 // символы остаются без изменений.
 // "Hello World" -> "o d"
 const str_15 = 'Hello World rgerhteht aqwrfwewrh'.trim().split(' ');
-let resStr_15 = '';
+let resStr_15 = [];
 for (let i = 0; i < str_15.length; i++) {
     const lastInd = str_15[i].length - 1;
-    // const index = str_15.lastIndexOf(' ') - 1;
-    // const index = str_15.lastIndexOf(str_15[i][i]);
-    // console.log(index);
-    resStr_15 += str_15[lastInd] + ' ';
-    console.log(lastInd);
+    resStr_15.push(str_15[i].slice(lastInd));
 }
-// console.log(str_15);
-console.log(resStr_15);
+console.log(resStr_15.join(' '));
