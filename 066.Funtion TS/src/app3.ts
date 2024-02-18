@@ -26,17 +26,44 @@ const arr_3: arr[] = [{ id: 1, title: 'Часы', count: 10, price: 500 },
 // console.log(result_3);
 
 
-function doArr(arr_3: arr[]) {
-    let newArr_3 = []
-    arr_3.forEach(function (el) {
-        if (el.count % 3 == 0) {
-            newArr_3.push(el)
-        }
+// 1b
+const doArr = (arr_3: arr[]): arr[] => {
+    const res_3 = arr_3.filter(function (el) {
+        return (el.count % 3 == 0)
     })
-    return newArr_3
+    return res_3
 }
 const result_3 = doArr(arr_3)
 console.log(result_3);
+
+
+
+// 2
+// function doArr(arr_3: arr[]):arr[] {
+//     let newArr_3 = []
+//     arr_3.forEach(function (el) {
+//         if (el.count % 3 == 0) {
+//             newArr_3.push(el)
+//         }
+//     })
+//     return newArr_3
+// }
+// const result_3 = doArr(arr_3)
+// console.log(result_3);
+
+
+// 2b
+// const doArr = (arr_3: arr[]): arr[] =>{
+//     let newArr_3 = []
+//     arr_3.forEach(function (el) {
+//         if (el.count % 3 == 0) {
+//             newArr_3.push(el)
+//         }
+//     })
+//     return newArr_3
+// }
+// const result_3 = doArr(arr_3)
+// console.log(result_3);
 
 
 

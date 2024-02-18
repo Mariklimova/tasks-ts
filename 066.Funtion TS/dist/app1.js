@@ -6,23 +6,42 @@ const arr_1 = [{ id: 1, title: 'Часы', count: 10, price: 500 },
     { id: 4, title: 'Ноутбук', count: 13, price: 3000 },
     { id: 5, title: 'Планшет', count: 22, price: 2100 },];
 // 1
-// function isCount(arr_1:arr[]):arr[] {
-//     const res_1 = arr_1.filter(function(el){
-//         return (el.count>10) 
+// function isCount(arr_1: arr[]): arr[] {
+//     const res_1 = arr_1.filter(function (el) {
+//         return (el.count > 10)
 //     })
 //     return res_1
 // }
 // const result = isCount(arr_1)
 // console.log(result);
-// 2
-function isCount(arr_1) {
-    let newArr_1 = [];
-    arr_1.forEach(function (el) {
-        if (el.count > 10) {
-            newArr_1.push(el);
-        }
+const isCount = (arr_1) => {
+    const res_1 = arr_1.filter(function (el) {
+        return (el.count > 10);
     });
-    return newArr_1;
-}
+    return res_1;
+};
 const result = isCount(arr_1);
 console.log(result);
+// 2
+// function isCount(arr_1: arr[]):arr[] {
+//     let newArr_1 = []
+//     arr_1.forEach(function (el) {
+//         if (el.count > 10) {
+//             newArr_1.push(el)
+//         }
+//     })
+//     return newArr_1
+// }
+// const result = isCount(arr_1)
+// console.log(result);
+// const isCount = (arr_1: arr[]) => {
+//     let newArr_1 = []
+//     arr_1.forEach(function (el) {
+//         if (el.count > 10) {
+//             newArr_1.push(el)
+//         }
+//     })
+//     return newArr_1
+// }
+// const result = isCount(arr_1)
+// console.log(result);
