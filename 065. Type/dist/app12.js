@@ -3,8 +3,25 @@
 const num_12 = +prompt();
 const arr_12 = [];
 for (let i = 0; i < num_12; i++) {
-    arr_12.push(prompt());
+    arr_12.push(+prompt());
 }
-const res_12 = arr_12.filter(function (el) {
-    return el % 2 == 0;
-});
+// 1
+// const res_12 = arr_12.reduce((prev, curr, i) => {
+//    return i % 2 === 1 ? prev + curr : prev + 0;
+// }, 0)
+// console.log(res_12);
+// 2
+// const res_12 = arr_12.reduce(function (sum, el, i) {
+//    if (i % 2 == 0) {
+//       return sum += el
+//    } else {
+//       return sum += 0
+//    }
+// }, 0)
+// console.log(res_12);
+// 3
+let sum_12 = 0;
+for (let i = 0; i < arr_12.length; i += 2) {
+    sum_12 += arr_12[i];
+}
+console.log(sum_12);

@@ -4,11 +4,23 @@
 
 
 const arr_15: string[] = ['hschool', 'company'];
-let res_15: string[] = []
+const res_15: string[] = []
 
-arr_15.forEach(function (el) {
-    res_15 += '!' + el;
+// 1
+// arr_15.forEach(function (el) {
+//     res_15.push( '!' + el);
+// })
+// console.log(res_15);
 
 
-})
-console.log(res_15);
+
+// 2
+// const res_155 = arr_15.map(function(el){
+//     return '!' + el
+// })
+// console.log(res_155);
+
+
+const res_155 = arr_15.map((el)=> '!' + el)
+console.log(res_155);
+

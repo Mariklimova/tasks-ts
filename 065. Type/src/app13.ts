@@ -3,9 +3,19 @@
 // [1, 2, 3, 4, 5, 6] -> [“нечет”, “чет”, “нечет”, “чет”, “нечет”, “чет”]
 
 const arr_13: number[] = [1, 2, 3, 4, 5, 6];
+const newArr_13: string[] = [];
+// 1
+// const res_13: string[] = arr_13.map((el) => (el % 2 == 0 ? 'чет' : 'нечет'))
+// console.log(res_13);
 
-const res_13: string[] = arr_13.map((el) => (el % 2 == 0 ? 'чет' : 'нечет'))
-
-console.log(res_13);
+// 2
+arr_13.forEach(function (el) {
+    if (el % 2 == 0) {
+        newArr_13.push('чет')
+    } else {
+        newArr_13.push('нечет')
+    }
+})
+console.log(newArr_13);
 
 
