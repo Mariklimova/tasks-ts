@@ -3,34 +3,29 @@
 // класса Calculator и выполните несколько операций.
 
 // 1
-// class Calculator {
-//     num1: number;
-//     num2: number;
+class Calculator {
+    num1: number;
+    num2: number;
 
-//     constructor(a: number, b: number) {
-//         this.num1 = a;
-//         this.num2 = b
-//     }
-//     add() {
-//         return this.num1 + this.num2
-//     }
-//     subtract() {
-//         return this.num1 - this.num2
-//     }
-//     multiply() {
-//         return this.num1 * this.num2
-//     }
-//     divide() {
-//         return this.num1 / this.num2
-//     }
+    constructor(a: number, b: number) {
+        this.num1 = a;
+        this.num2 = b
+    }
+    add = () => this.num1 + this.num2;
 
-// }
-// const calculator = new Calculator(10, 5)
+    subtract = () => this.num1 - this.num2;
 
-// console.log(calculator.add());
-// console.log(calculator.subtract());
-// console.log(calculator.multiply());
-// console.log(calculator.divide());
+    multiply = () => this.num1 * this.num2;
+
+    divide = () => this.num1 / this.num2;
+}
+
+const calculator = new Calculator(10, 5)
+
+console.log(calculator.add());
+console.log(calculator.subtract());
+console.log(calculator.multiply());
+console.log(calculator.divide());
 
 
 
@@ -40,21 +35,16 @@
 //     num1: number = 10
 //     num2: number = 5
 
-    
-//     add() {
-//         return this.num1 + this.num2
-//     }
-//     subtract() {
-//         return this.num1 - this.num2
-//     }
-//     multiply() {
-//         return this.num1 * this.num2
-//     }
-//     divide() {
-//         return this.num1 / this.num2
-//     }
+//     add = () => this.num1 + this.num2;
 
+//     subtract = () => this.num1 - this.num2;
+
+//     multiply = () => this.num1 * this.num2;
+
+//     divide = () => this.num1 / this.num2;
 // }
+
+
 // const calculator = new Calculator()
 
 // console.log(calculator.add());
@@ -66,67 +56,77 @@
 
 // 3
 // class Calculator {
-//         num1: number;
-//         num2: number;
-    
-        
-//         add() {
-//             return this.num1 + this.num2
-//         }
-//         subtract() {
-//             return this.num1 - this.num2
-//         }
-//         multiply() {
-//             return this.num1 * this.num2
-//         }
-//         divide() {
-//             return this.num1 / this.num2
-//         }
-    
-//     }
-//     const calculator = new Calculator()
-//     calculator.num1 = 10;
-//     calculator.num2 = 5;
+//     num1: number;
+//     num2: number;
 
-//     console.log(calculator.add());
-//     console.log(calculator.subtract());
-//     console.log(calculator.multiply());
-//     console.log(calculator.divide());
+//     add = () => this.num1 + this.num2;
+
+//     subtract = () => this.num1 - this.num2;
+
+//     multiply = () => this.num1 * this.num2;
+
+//     divide = () => this.num1 / this.num2;
+// }
+
+// const calculator = new Calculator()
+// calculator.num1 = 10;
+// calculator.num2 = 5;
+
+// console.log(calculator.add());
+// console.log(calculator.subtract());
+// console.log(calculator.multiply());
+// console.log(calculator.divide());
 
 
 
 // 4
-class Calculator {
-    num1: number;
-    num2: number;
+// class Calculator {
+//     num1: number;
+//     num2: number;
 
-    setNum1(num1:number){
-        this.num1 = num1
-    }
-    setNum2(num2:number){
-        this.num2 = num2
-    }
+//     setNum1(num1: number) {
+//         this.num1 = num1
+//     }
+//     setNum2(num2: number) {
+//         this.num2 = num2
+//     }
 
-    
-    add() {
-        return this.num1 + this.num2
-    }
-    subtract() {
-        return this.num1 - this.num2
-    }
-    multiply() {
-        return this.num1 * this.num2
-    }
-    divide() {
-        return this.num1 / this.num2
-    }
+//     add = () => this.num1 + this.num2;
 
-}
-const calculator = new Calculator()
-calculator.setNum1(10);
-calculator.setNum2(5);
+//     subtract = () => this.num1 - this.num2;
 
-console.log(calculator.add());
-console.log(calculator.subtract());
-console.log(calculator.multiply());
-console.log(calculator.divide());
+//     multiply = () => this.num1 * this.num2;
+
+//     divide = () => this.num1 / this.num2
+// }
+
+// const calculator = new Calculator()
+// calculator.setNum1(10);
+// calculator.setNum2(5);
+
+// console.log(calculator.add());
+// console.log(calculator.subtract());
+// console.log(calculator.multiply());
+// console.log(calculator.divide());
+
+
+
+// 5
+// class Calculator {
+
+//     add = (num1: number, num2: number) => num1 + num2;
+
+//     subtract = (num1: number, num2: number) => num1 - num2;
+
+//     multiply = (num1: number, num2: number) => num1 * num2;
+
+//     divide = (num1: number, num2: number) => num1 / num2;
+// }
+
+// const calculator = new Calculator()
+
+// console.log(calculator.add(10, 5));
+// console.log(calculator.subtract(10, 5));
+// console.log(calculator.multiply(10, 5));
+// console.log(calculator.divide(10, 5));
+

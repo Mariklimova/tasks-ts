@@ -5,10 +5,7 @@
 // 1
 // class Rectangle {
 
-
-//     getArea(width: number, height: number) {
-//         return width * height
-//     }
+//     getArea=(width: number, height: number)=> width * height;
 
 // }
 
@@ -29,27 +26,60 @@
 //         this.height = height
 //     }
 
-//     getArea() {
-//         return this.width * this.height
-//     }
+//     getArea = () => this.width * this.height;
 // }
 
 // const rectangle = new Rectangle();
-// rectangle.setHeight(23);
-// rectangle.setWidth(11)
+// rectangle.setHeight(100);
+// rectangle.setWidth(200)
 
 // console.log(rectangle.getArea());
 
 
+
+// 3
+// class Rectangle {
+//     width: number;
+//     height: number;
+
+//     constructor(a:number,b:number){
+//         this.width = a;
+//         this.height = b;
+//     }
+
+//     getArea = () => this.width * this.height
+
+// }
+
+// const rectangle = new Rectangle(100,200);
+// console.log(rectangle.getArea());
+
+
+
+// 4
+// class Rectangle {
+//     width: number = 100;
+//     height: number = 200;
+
+//     getArea = () => this.width * this.height
+
+// }
+
+// const rectangle = new Rectangle();
+// console.log(rectangle.getArea());
+
+
+// 5
 class Rectangle {
+    width: number;
+    height: number;
 
+    getArea = () => this.width * this.height
 
-        getArea(width: number, height: number) {
-            return width * height
-        }
-    
-    }
-    
-    const rectangle = new Rectangle();
-    console.log(rectangle.getArea(100, 200));
-    
+}
+
+const rectangle = new Rectangle();
+rectangle.width = 100;
+rectangle.height = 200;
+console.log(rectangle.getArea());
+

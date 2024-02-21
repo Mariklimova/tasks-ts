@@ -22,7 +22,6 @@ class Student2 {
     name: string;
     age: number;
 
-
 }
 const student2 = new Student2();
 student2.name = 'Agata';

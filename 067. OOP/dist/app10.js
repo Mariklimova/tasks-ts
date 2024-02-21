@@ -4,15 +4,14 @@
 // экземпляр класса Product и вызовите метод displayProductInfo()
 class Product {
     product = [
-        product, Products[] = [
-            { price: 10, title: 'title1' },
-            { price: 20, title: 'title2' },
-            { price: 30, title: 'title3' },
-            { price: 40, title: 'title4' }
-        ]
+        { price: 10, title: 'title1' },
+        { price: 20, title: 'title2' },
+        { price: 30, title: 'title3' },
+        { price: 40, title: 'title4' }
     ];
     displayProductInfo() {
-        return this.product.filter((el));
+        return this.product.filter((el) => el.price > 20);
     }
 }
 const product = new Product();
+console.log(product.displayProductInfo());

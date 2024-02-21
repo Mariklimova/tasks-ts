@@ -9,17 +9,16 @@ interface Products {
 }
 
 class Product {
-    product: Product[] = [
-        product: Products[] = [
-            { price: 10, title: 'title1' },
-            { price: 20, title: 'title2' },
-            { price: 30, title: 'title3' },
-            { price: 40, title: 'title4' }
-        ]
+    product: Products[] = [
+        { price: 10, title: 'title1' },
+        { price: 20, title: 'title2' },
+        { price: 30, title: 'title3' },
+        { price: 40, title: 'title4' }
     ]
 
-    displayProductInfo(): Product[]{
-        return this.product.filter((el))
+    displayProductInfo(): Products[] {
+        return this.product.filter((el) => el.price > 20)
     }
 }
-const product = new Product()
+const product = new Product();
+console.log(product.displayProductInfo());
