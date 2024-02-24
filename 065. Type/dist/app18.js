@@ -3,9 +3,7 @@
 const objArr = [
     { id: 1, author: 'Толстой', title: 'Война и мир' },
     { id: 2, author: 'Булгаков', title: 'Мастер и Маргарита' },
-    { id: 3, author: 'Оруэлл', title: 'Война и мир' }
+    { id: 3, author: 'Оруэлл', title: 'Скотный двор' }
 ];
-const resBook = objArr.filter((el) => {
-    return el.author == 'Булгаков';
-});
+const resBook = objArr.filter((el) => el.author == 'Булгаков');
 console.log(resBook);

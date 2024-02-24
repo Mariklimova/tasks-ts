@@ -11,13 +11,13 @@ interface iAccount {
 }
 
 class Account implements iAccount {
-    balance: number = 500
+   public balance: number = 500
 
-    deposit(sum: number): number {
+   public deposit(sum: number): number {
         return this.balance + sum
     }
 
-    withdraw(minus: number): number {
+   public withdraw(minus: number): number {
         return this.balance - minus
     }
 }

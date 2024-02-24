@@ -10,16 +10,19 @@ class TodoList {
         { id: 4, tasks: 'to water the flowers' }
     ];
     addTask(item) {
-        this.list = item;
+        return this.list.push(item);
     }
     removeTask(item) {
-        delete this.list[item];
+        //  delete this.list[item]
+        const res = this.list.filter((el) => (el.tasks !== item));
+        this.list = res;
+        return res;
     }
     getTasks() {
         return this.list;
     }
 }
 const todoList = new TodoList();
-todoList.addTask({ 'tasks': 'do your homework' });
+todoList.addTask({ id: 5, tasks: 'do your homework' });
 todoList.removeTask('to water the flowers');
 console.log(todoList.getTasks());

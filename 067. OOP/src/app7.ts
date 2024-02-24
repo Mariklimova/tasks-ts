@@ -4,7 +4,7 @@
 // несколько операций.
 
 interface tasksList {
-    readonly id: number,
+    id: number,
     tasks: string
 }
 
@@ -16,12 +16,15 @@ class TodoList {
         { id: 4, tasks: 'to water the flowers' }
     ]
 
-    addTask(item: tasksList[]) {
-        this.list = item;
+    addTask(item: tasksList) {
+        return this.list.push(item);
     }
 
     removeTask(item) {
-        delete this.list[item]
+        //  delete this.list[item]
+        const res = this.list.filter((el) => (el.tasks !== item))
+        this.list = res
+        return res
     }
 
     getTasks() {
@@ -30,6 +33,7 @@ class TodoList {
 
 }
 const todoList = new TodoList();
-todoList.addTask( {'tasks': 'do your homework' })
-todoList.removeTask( 'to water the flowers')
+todoList.addTask({ id: 5, tasks: 'do your homework' })
+todoList.removeTask('to water the flowers')
 console.log(todoList.getTasks());
+

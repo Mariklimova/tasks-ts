@@ -2,6 +2,22 @@
 // последовательностью.
 const leng = +prompt('введите длину массива');
 const arr_16 = [];
-for (let i = 0; i < arr_16.length; i++) {
+for (let i = 0; i < leng; i++) {
     arr_16.push(+prompt('введите число'));
 }
+console.log(arr_16);
+// 1
+// let flag_16: boolean = true
+// for (let i = 0; i < arr_16.length; i++) {
+//     if (arr_16[i] >= arr_16[i + 1]) {
+//         flag_16 = false;
+//         break
+//     }
+// }
+// console.log(flag_16 == true ? 'массив со строго возрастающей последовательностью' : 'не является массивом со строго возрастающей последовательностью');
+// 2
+const min_16 = Math.min(...arr_16);
+if (arr_16[0] == min_16)
+    console.log('массив со строго возрастающей последовательностью');
+else
+    console.log('не является массивом со строго возрастающей последовательностью');
