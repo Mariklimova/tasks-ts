@@ -3,14 +3,15 @@
 // проверки.
 // Написать тест для функции
 
-const arrPhone = ['+15656233','+126565655','5466565652','54988953'];
+const arrPhone = ['+15656233','+126565655','5466565652','54988953', '5466565652'];
 
-function getUniquePhon(arrPhone) {
+function getUniquePhone(arrPhone) {
     try {
+      if(!Array.isArray(arrPhone)) throw new Error('not Array')
         if(!arrPhone || !arrPhone.length) throw new Error("invalid array of phone")
         const uniquePhone = [];
         for (let el of arrPhone) {
-          if (arrPhone.indexOf(el) === arrPhone.lastIndexOf(el)) {
+          if (!uniquePhone.includes(el)) {
             uniquePhone.push(el);
           }
         }
@@ -19,4 +20,14 @@ function getUniquePhon(arrPhone) {
         return error.message
     }
 }
+
+describe('test getUniquePhone',()=>{
+  test('successful',()=>{
+    const res = getUniquePhone(arrPhone);
+    const equal = ['+15656233','+126565655','5466565652','54988953'];
+    expect(res).toEqual(equal)
+  })
+})
+
+
 

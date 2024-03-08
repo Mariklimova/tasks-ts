@@ -4,30 +4,30 @@
 // Написать тест для функции
 
 
-function doPower(a,b) {
+function doPower(a, b) {
     try {
-        if (isNaN(a)|| isNaN(b))  throw new Error('not number');
-        if(typeof a !=='number'|| typeof b !=='number') throw new Error('type not number')   
-        return a**b
-        
+        if (isNaN(a) || isNaN(b)) throw new Error('not number');
+        if (typeof a !== 'number' || typeof b !== 'number') throw new Error('type not number')
+        return a ** b
+
     } catch (error) {
         return error.message
     }
 }
 
-describe('test doPower',()=>{
-    test('true',()=>{
-        const result = doPower(2,5);
+describe('test doPower', () => {
+    test('true', () => {
+        const result = doPower(2, 5);
         expect(result).toBe(32)
     });
 
-    test('false',()=>{
-        const result = doPower('3','3');
+    test('false', () => {
+        const result = doPower('3', '3');
         expect(result).toBe('type not number')
     });
 
-    test('false2',()=>{
-        const result = doPower('gcg','guh');
+    test('false2', () => {
+        const result = doPower('g', 'u');
         expect(result).toBe('not number')
     });
 })
