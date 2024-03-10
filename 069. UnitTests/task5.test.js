@@ -23,10 +23,17 @@ function getUniquePhone(arrPhone) {
 
 describe('test getUniquePhone',()=>{
   test('successful',()=>{
-    const res = getUniquePhone(arrPhone);
     const equal = ['+15656233','+126565655','5466565652','54988953'];
-    expect(res).toEqual(equal)
+    const res = getUniquePhone(arrPhone);
+    expect(res).toEqual(equal);
+    expect(res).toHaveLength(4)
   })
+
+  test('false',()=>{
+    const res = getUniquePhone([]);
+    expect(res).toEqual("invalid array of phone")
+  })
+  
 })
 
 
