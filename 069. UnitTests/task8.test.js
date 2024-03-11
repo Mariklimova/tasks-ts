@@ -4,16 +4,20 @@
 
 
 function getObj(obj) {
-    let arr = [];
-    for (const key in obj) {
-        if (obj[key] % 2 == 0) arr.push(obj[key]);
+    try {
+        let arr = [];
+        for (const key in obj) {
+            if (obj[key] % 2 == 0) arr.push(obj[key]);
+        }
+        return arr
+    } catch (error) {
+        return error.message
     }
-    return arr
 }
 
-describe('test getObj',()=>{
-    test('true',()=>{
-        
+describe('test getObj', () => {
+    test('true', () => {
+
         const obj = {
             id: 2,
             name: 'Ivan',
@@ -23,11 +27,11 @@ describe('test getObj',()=>{
         }
 
         const result = getObj(obj);
-        expect(result).toEqual([2,20])
+        expect(result).toEqual([2, 20])
     })
 
-    test('true',()=>{
-        
+    test('true', () => {
+
         const obj = {
             id: 1,
             name: 'Ivan',
