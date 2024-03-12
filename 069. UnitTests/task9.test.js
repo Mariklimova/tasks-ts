@@ -11,19 +11,24 @@
 
 
 function getNewArr(arr, n) {
-    if (typeof n != 'number') throw new Error('An error of data types');
-
-    let newArr = [];
-    let itemArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        itemArr.push(arr[i])
-        if (itemArr.length == n) {
-            newArr.push(itemArr);
-            itemArr = [];
+    try {
+        if (typeof n != 'number') throw new Error('An error of data types');
+    
+        let newArr = [];
+        let itemArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            itemArr.push(arr[i])
+            if (itemArr.length == n) {
+                newArr.push(itemArr);
+                itemArr = [];
+            }
         }
+        itemArr.length === 0 ? null : newArr.push(itemArr);
+        return newArr
+        
+    } catch (error) {
+        return error.message
     }
-    itemArr.length === 0 ? null : newArr.push(itemArr);
-    return newArr
 }
 
 

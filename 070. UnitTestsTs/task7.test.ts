@@ -7,19 +7,48 @@
 
 function findPairWithSum(numbers, targetSum) {
     try {
-        let values = [targetSum - numbers[0]];
-        for (let i = 1; i < numbers.length; i++) {
-            let value = targetSum - numbers[i]
-            if (values.includes(numbers[i])) {
-                return [targetSum - numbers[i], numbers[i]]
-            } else {
-                values.push(value)
+        // let values = [targetSum - numbers[0]];
+
+        for (let i = 0; i < numbers.length; i++) {
+            let firstValue = targetSum - numbers[i]
+
+            let secondValue = targetSum - firstValue
+
+            for (let j = 0; j < numbers.length; j++) {
+                if (numbers[j] == secondValue && numbers[j] == firstValue) {
+                    //   console.log(numbers.includes(firstValue[i]));
+    
+                    return [firstValue, secondValue]
+    
+    
+                } else {
+                    // return null;
+                }
+                
             }
         }
-        return null;
+        // return null;
     } catch (error) {
         return error.message
     }
 }
-const res = findPairWithSum([1, 2, 3, 4, 5, 6], 7);
+const res = findPairWithSum([1, 2, 3, 4, 5, 6], 11);
 console.log(res);
+
+
+
+
+// const numbers = [1, 2, -3, 4, 5, 6]
+// const sum = 3
+
+// const result = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//     for (let j = 0; j < numbers.length; j++) {
+//         if (numbers[i] + numbers[j] === sum) {
+//             result.push([numbers[i], numbers[j]]);
+//         }
+//     }
+// }
+
+// console.log(result);
