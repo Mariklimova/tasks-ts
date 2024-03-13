@@ -4,7 +4,7 @@
 
 function capitalizeString(str:string):string {
     try {
-        if (!str) throw new Error('not data');
+        if (!str) throw new Error('not data, the line is empty');
         
         const arr: string[] = str.split(' ');
         const newArr: string[] = [];
@@ -18,10 +18,17 @@ function capitalizeString(str:string):string {
 }
 
 describe('test capitalizeString',()=>{
-    test('true',()=>{
+    test('corrected',()=>{
         const str = 'hjikj juiko opiiy sedr';
         const res = capitalizeString(str);
         expect(res).toBe('Hjikj Juiko Opiiy Sedr')
+
+    });
+
+    test('uncorrected',()=>{
+        const str = '';
+        const res = capitalizeString(str);
+        expect(res).toBe('not data, the line is empty')
 
     })
 })

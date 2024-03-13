@@ -5,41 +5,35 @@
 
 
 
-function findPairWithSum(numbers: number[], targetSum: number): any {
+function findPairWithSum(numbers: number[], targetSum: number): any[] {
     try {
         if (!numbers.length) throw new Error('The array is empty')
+
         const result: number[] = [];
 
         for (let i = 0; i < numbers.length; i++) {
             for (let j = 0; j < numbers.length; j++) {
                 if (numbers[i] + numbers[j] === targetSum) {
-                    result.push([numbers[i], numbers[j]]);
+                    result.push(numbers[i], numbers[j]);
                 }
             }
         }
-
-
+        return result;
     } catch (error) {
         return error.message
     }
 }
-const res = findPairWithSum([1, 2, -3, 4, 5, 6], 3);
-console.log(res);
 
+describe('test findMissingNumber', () => {
+    test('corrected', () => {
+        const numbers = [1, 2, -3, 4, 5, 6];
+        const targetSum = 3
+        const res = findPairWithSum(numbers, targetSum);
+        expect(res).toEqual([1, 2, 2, 1, -3, 6, 6, -3]);
+    })
 
-
-
-// const numbers = [1, 2, -3, 4, 5, 6]
-// const sum = 3
-
-// const result = [];
-
-// for (let i = 0; i < numbers.length; i++) {
-//     for (let j = 0; j < numbers.length; j++) {
-//         if (numbers[i] + numbers[j] === sum) {
-//             result.push([numbers[i], numbers[j]]);
-//         }
-//     }
-// }
-
-// console.log(result);
+    test('uncorrected', () => {
+        const res = findPairWithSum([], 3);
+        expect(res).toBe('The array is empty');
+    })
+})

@@ -25,9 +25,7 @@ function uniqueStrArr(str: string): string[] {
 describe('test uniqueStrArr', () => {
     test('corrected uniqueStrArr', () => {
        const str = 'AAAABBBCCDAABBB'
-        const res = uniqueStrArr(str)
-        console.log(res);
-        
+        const res = uniqueStrArr(str);        
         expect(res).toEqual(['A', 'B', 'C', 'D', 'A', 'B'])
     });
 })

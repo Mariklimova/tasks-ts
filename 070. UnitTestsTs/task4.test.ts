@@ -13,9 +13,15 @@ const flattenArray = (array: any[]): any[] => {
     }
 }
 describe('test flattenArray', () => {
-    test('true', () => {
+    test('corrected', () => {
         const arr = [1, 2, [], [1, 2], [2, []]];
         const arrFlat = flattenArray(arr);
         expect(arrFlat).toEqual([1, 2, 1, 2, 2]);
+    });
+
+    test('uncorrected', () => {
+        const arr = [];
+        const arrFlat = flattenArray(arr);
+        expect(arrFlat).toBe('empty array');
     });
 })

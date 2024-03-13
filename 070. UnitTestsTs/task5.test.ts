@@ -22,9 +22,45 @@ function chunkArray(array: any[], size: number): any[][] {
 }
 
 describe('test chunkArray', () => {
-    test('true', () => {
+    test('corrected', () => {
+        const arr = [1, 2, 3, 4, 5];
+        const res = chunkArray(arr, 1);
+        expect(res).toEqual([[1], [2], [3], [4], [5]])
+    });
+
+    test('corrected', () => {
         const arr = [1, 2, 3, 4, 5];
         const res = chunkArray(arr, 2);
         expect(res).toEqual([[1, 2], [3, 4], [5]])
+    });
+
+    test('corrected', () => {
+        const arr = [1, 2, 3, 4, 5];
+        const res = chunkArray(arr, 3);
+        expect(res).toEqual([[1, 2, 3], [4, 5]])
+    });
+
+    test('corrected', () => {
+        const arr = [1, 2, 3, 4, 5];
+        const res = chunkArray(arr, 4);
+        expect(res).toEqual([[1, 2, 3, 4], [5]])
+    });
+
+    test('corrected', () => {
+        const arr = [1, 2, 3, 4, 5];
+        const res = chunkArray(arr, 5);
+        expect(res).toEqual([[1, 2, 3, 4, 5]])
+    });
+
+    test('uncorrected', () => {
+        const arr = [1, 2, 3, 4, 5];
+        const res = chunkArray(arr, 0);
+        expect(res).toBe('size can not be 0')
+    });
+
+    test('uncorrected', () => {
+        const arr = [];
+        const res = chunkArray(arr, 2);
+        expect(res).toBe('array is empty')
     })
 })
