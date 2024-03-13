@@ -5,34 +5,25 @@
 
 
 
-function findPairWithSum(numbers, targetSum) {
+function findPairWithSum(numbers: number[], targetSum: number): any {
     try {
-        // let values = [targetSum - numbers[0]];
+        if (!numbers.length) throw new Error('The array is empty')
+        const result: number[] = [];
 
         for (let i = 0; i < numbers.length; i++) {
-            let firstValue = targetSum - numbers[i]
-
-            let secondValue = targetSum - firstValue
-
             for (let j = 0; j < numbers.length; j++) {
-                if (numbers[j] == secondValue && numbers[j] == firstValue) {
-                    //   console.log(numbers.includes(firstValue[i]));
-    
-                    return [firstValue, secondValue]
-    
-    
-                } else {
-                    // return null;
+                if (numbers[i] + numbers[j] === targetSum) {
+                    result.push([numbers[i], numbers[j]]);
                 }
-                
             }
         }
-        // return null;
+
+
     } catch (error) {
         return error.message
     }
 }
-const res = findPairWithSum([1, 2, 3, 4, 5, 6], 11);
+const res = findPairWithSum([1, 2, -3, 4, 5, 6], 3);
 console.log(res);
 
 
