@@ -6,10 +6,6 @@ const str1: string = 'hello';
 let strNew: string = '';
 
 for (let i = 0; i < str1.length; i++) {
-    if (!strNew.includes(str1[i])) {
-        strNew += str1[i];
-    }
-
+    if (!strNew.includes(str1[i])) strNew += str1[i];
 }
-
 console.log(strNew);

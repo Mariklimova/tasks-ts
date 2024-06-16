@@ -10,12 +10,9 @@ let newStr: string = '';
 let i: number = 0;
 
 while (i < str_12.length) {
-    if (vowels.includes(str_12[i])) {
-        newStr += '*'
-    }
-    else {
-        newStr += str_12[i]
-    }
+    if (vowels.includes(str_12[i])) newStr += '*';
+    else newStr += str_12[i];
+
     i++
 }
 

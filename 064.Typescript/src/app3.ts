@@ -5,10 +5,13 @@
 
 const password: string = 'Murka12565256'
 
-if (password.length > 8) {
-    console.log('Пароль надежный');
+// if (password.length > 8) {
+//     console.log('Пароль надежный');
 
-} else {
-    console.log('Пароль слишком короткий');
+// } else {
+//     console.log('Пароль слишком короткий');
 
-}
+// }
+
+
+console.log(password.length > 8?'Пароль надежный':'Пароль слишком короткий');

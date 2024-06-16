@@ -3,8 +3,7 @@
 const arr_17 = [1, 2, 5, 9, 4, 13, 4, 10];
 let numRepet = 0;
 for (let i = 0; i < arr_17.length; i++) {
-    if (arr_17[i] == 4) {
+    if (arr_17[i] === 4)
         numRepet++;
-    }
 }
 console.log(numRepet);

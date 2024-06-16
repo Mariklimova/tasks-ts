@@ -2,11 +2,9 @@
 // выведите каждый второй символ строки.
 
 const str: string = 'gvjkjkkjvghdr';
-let res = ''
-for (let i = 0; i < str.length; i++) {
-   if ((i - 1) % 2 === 0) {
-      res += str[i];
-   }
+let res = '';
 
+for (let i = 0; i < str.length; i++) {
+   if ((i - 1) % 2 === 0) res += str[i];
 }
 console.log(res);

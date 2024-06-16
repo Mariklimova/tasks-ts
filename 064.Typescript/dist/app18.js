@@ -4,12 +4,15 @@
 // 444444 -> 4 чет 4 чет 4 чет 4 чет 4 чет 4 чет
 const strNum = prompt();
 let resString = '';
+// for (let i = 0; i < strNum.length; i++) {
+//     if (+strNum[i] % 2 == 0) {
+//         resString += strNum[i] + ' чет ';
+//     } else {
+//         resString += strNum[i] + ' нечет ';
+//     }
+// }
+// console.log(resString);
 for (let i = 0; i < strNum.length; i++) {
-    if (+strNum[i] % 2 == 0) {
-        resString += strNum[i] + ' чет ';
-    }
-    else {
-        resString += strNum[i] + ' нечет ';
-    }
+    +strNum[i] % 2 == 0 ? resString += strNum[i] + ' чет ' : resString += strNum[i] + ' нечет ';
 }
 console.log(resString);

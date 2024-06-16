@@ -5,12 +5,10 @@ const vowels = ['e', 'i', 'o', 'a', 'y'];
 let newStr = '';
 let i = 0;
 while (i < str_12.length) {
-    if (vowels.includes(str_12[i])) {
+    if (vowels.includes(str_12[i]))
         newStr += '*';
-    }
-    else {
+    else
         newStr += str_12[i];
-    }
     i++;
 }
 console.log(newStr);

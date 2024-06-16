@@ -4,9 +4,11 @@
 const firstStr: string = 'muka',
     secondStr = 'kuma';
 
-if (firstStr.split('').sort().join('') == secondStr.split('').sort().join('')) {
-    console.log('анаграмма');
+// if (firstStr.split('').sort().join('') == secondStr.split('').sort().join('')) {
+//     console.log('анаграмма');
 
-} else {
-    console.log('не анаграмма');
-}
+// } else {
+//     console.log('не анаграмма');
+// }
+
+console.log(firstStr.split('').sort().join('') == secondStr.split('').sort().join('')?'анаграмма':'не анаграмма');

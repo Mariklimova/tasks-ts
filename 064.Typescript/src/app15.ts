@@ -6,7 +6,7 @@
 
 
 const str_15: string[] = 'Hello World rgerhteht aqwrfwewrh'.trim().split(' ');
-let resStr_15: string[] = [];
+const resStr_15: string[] = [];
 
 for (let i = 0; i < str_15.length; i++) {
 

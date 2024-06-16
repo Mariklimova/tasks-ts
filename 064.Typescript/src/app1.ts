@@ -4,10 +4,15 @@
 
 const number: number = + prompt();
 
-if (number % 2===0) {
-    console.log('четное');
+// if (number % 2===0) {
+//     console.log('четное');
     
-} else {
-    console.log('нечетное');
+// } else {
+//     console.log('нечетное');
     
-}
+// }
+
+
+
+console.log(number % 2===0?'четное':'нечетное');
+

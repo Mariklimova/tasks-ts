@@ -4,9 +4,14 @@
 
 const polindrom: string = prompt();
 
-if (polindrom.split('').reverse().join('') === polindrom) {
-    console.log(`${polindrom} - polindrom`);
+// if (polindrom.split('').reverse().join('') === polindrom) {
+//     console.log(`${polindrom} - polindrom`);
 
-} else {
-    console.log(`${polindrom} - ne polindrom`);
-}
+// } else {
+//     console.log(`${polindrom} - ne polindrom`);
+// }
+
+
+console.log(polindrom.split('').reverse().join('') === polindrom ? `${polindrom} - polindrom` : `${polindrom} - ne polindrom`);
+
+
