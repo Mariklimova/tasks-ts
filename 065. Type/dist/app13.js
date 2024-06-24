@@ -7,12 +7,14 @@ const newArr_13 = [];
 // const res_13: string[] = arr_13.map((el) => (el % 2 == 0 ? 'чет' : 'нечет'))
 // console.log(res_13);
 // 2
-arr_13.forEach(function (el) {
-    if (el % 2 == 0) {
-        newArr_13.push('чет');
-    }
-    else {
-        newArr_13.push('нечет');
-    }
-});
+// arr_13.forEach(function (el) {
+//     if (el % 2 == 0) {
+//         newArr_13.push('чет')
+//     } else {
+//         newArr_13.push('нечет')
+//     }
+// })
+// console.log(newArr_13);
+// 3
+arr_13.forEach((el) => el % 2 == 0 ? newArr_13.push('чет') : newArr_13.push('нечет'));
 console.log(newArr_13);

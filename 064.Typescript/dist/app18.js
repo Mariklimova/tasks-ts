@@ -4,6 +4,7 @@
 // 444444 -> 4 чет 4 чет 4 чет 4 чет 4 чет 4 чет
 const strNum = prompt();
 let resString = '';
+// 1
 // for (let i = 0; i < strNum.length; i++) {
 //     if (+strNum[i] % 2 == 0) {
 //         resString += strNum[i] + ' чет ';
@@ -12,7 +13,11 @@ let resString = '';
 //     }
 // }
 // console.log(resString);
+// 1b
 for (let i = 0; i < strNum.length; i++) {
     +strNum[i] % 2 == 0 ? resString += strNum[i] + ' чет ' : resString += strNum[i] + ' нечет ';
 }
 console.log(resString);
+// 2
+const res_18 = strNum.split('').map((el) => +el % 2 === 0 ? el + ' чет ' : el + ' нечет ');
+console.log(res_18.join(''));

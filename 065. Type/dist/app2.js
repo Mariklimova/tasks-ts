@@ -14,3 +14,5 @@ const result_2 = arr_2.filter(function (el) {
     return el.includes('a');
 });
 console.log(result_2);
+// 3
+console.log(arr_2.filter((el) => el.includes('a')));

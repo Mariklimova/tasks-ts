@@ -19,9 +19,14 @@ console.log(res_2);
 
 // 2
 
-const result_2 = arr_2.filter(function (el) {
+const result_2: string[] = arr_2.filter(function (el: string) {
     return el.includes('a')
 })
 
 console.log(result_2);
+
+
+// 3
+console.log(arr_2.filter((el: string) => el.includes('a')));
+
 

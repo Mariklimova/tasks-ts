@@ -7,9 +7,16 @@ for (let i = 0; i < 6; i++) {
   arr7.push(prompt());
 
 }
-const res7 = arr7.map(el => {
-  return Number(el)
-}).filter((el) => {
-  return !isNaN(el)
-});
+
+// 1
+// const res7 = arr7.map(el => {
+//   return Number(el)
+// }).filter((el) => {
+//   return !isNaN(el)
+// });
+// console.log(res7);
+
+
+// 2
+const res7 = arr7.map(el => Number(el)).filter((el) => !isNaN(el));
 console.log(res7);

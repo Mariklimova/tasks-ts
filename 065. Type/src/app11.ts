@@ -9,9 +9,14 @@ for (let i = 0; i < n_; i++) {
 
 }
 
+// 1
 const res_11 = arr.every(function (el) {
     if (/^[\w\_\-\.]+\@[a-z]+\.[a-z]{0,5}/gm.test(el)) return true
     else return false
 })
 console.log(res_11);
 
+
+// 2
+const res_111 = arr.every((el)=>/^[\w\_\-\.]+\@[a-z]+\.[a-z]{0,5}/gm.test(el))
+console.log(res_111);
