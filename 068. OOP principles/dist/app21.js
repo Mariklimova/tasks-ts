@@ -21,7 +21,7 @@
 // → Результат: Motorcycle stopped
 class Vehicle_21 {
 }
-class Car_21 extends Vehicle {
+class Car_21 extends Vehicle_21 {
     start() {
         console.log('Car started');
     }
@@ -29,12 +29,12 @@ class Car_21 extends Vehicle {
         console.log('Car stopped');
     }
 }
-class Motorcycle_21 extends Vehicle {
+class Motorcycle_21 extends Vehicle_21 {
     start() {
-        console.log('Car started');
+        console.log('Motorcycle started');
     }
     stop() {
-        console.log('Car stopped');
+        console.log('Motorcycle stopped');
     }
 }
 const car_21 = new Car_21();

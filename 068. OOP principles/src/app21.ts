@@ -26,7 +26,7 @@ abstract class Vehicle_21 {
     abstract stop(): void
 }
 
-class Car_21 extends Vehicle {
+class Car_21 extends Vehicle_21 {
     start(): void {
         console.log('Car started');
     }
@@ -35,12 +35,12 @@ class Car_21 extends Vehicle {
     }
 }
 
-class Motorcycle_21 extends Vehicle {
+class Motorcycle_21 extends Vehicle_21 {
     start(): void {
-        console.log('Car started');
+        console.log('Motorcycle started');
     }
     stop(): void {
-        console.log('Car stopped');
+        console.log('Motorcycle stopped');
     }
 }
 

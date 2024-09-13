@@ -104,9 +104,9 @@
 // 5
 class ArrayAnalyzer {
 
-    getAverage = (arr: number[]) => arr.reduce((sum, el) => sum + el / arr.length, 0)
+    getAverage = (arr: number[]) => arr.reduce((sum, el) => sum + el, 0) / arr.length
     getMax = (arr: number[]) => Math.max(...arr)
-    getMin = (arr: number[])=>Math.min(...arr)
+    getMin = (arr: number[]) => Math.min(...arr)
 }
 const arrayAnalyzer = new ArrayAnalyzer()
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];

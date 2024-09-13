@@ -80,7 +80,7 @@
 // console.log(arrayAnalyzer.getMin());
 // 5
 class ArrayAnalyzer {
-    getAverage = (arr) => arr.reduce((sum, el) => sum + el / arr.length, 0);
+    getAverage = (arr) => arr.reduce((sum, el) => sum + el, 0) / arr.length;
     getMax = (arr) => Math.max(...arr);
     getMin = (arr) => Math.min(...arr);
 }

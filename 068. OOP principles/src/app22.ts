@@ -10,20 +10,24 @@
 // → Результат: {"id": 1, "title": "яблоко", "price": 50}
 // Входные: [ {"id": 1, "title": "банан", "price": 35}, {"id": 2, "title": "киви", "price": 70}} ] → Результат: null
 
-interface iFrut{
-    id:number;
-    title:string;
+interface iFrut {
+    id: number;
+    title: string;
     price: number
 }
 
-abstract class Fruit_22{
-    abstract array:iFrut[]
+abstract class Fruit_22 {
+    abstract fruits: iFrut[]
 }
 
-class Apple_22 extends Fruit_22{
-    array: iFrut[] = [  {id: 1, title: "яблоко", price: 50},
-     {id: 2, title: "банан", price: 30},
-     {id: 3, title: "груша", price: 45} ];
+class Apple_22 extends Fruit_22 {
+    fruits: iFrut[] = [{ id: 1, title: "яблоко", price: 50 },
+    { id: 2, title: "банан", price: 30 },
+    { id: 3, title: "груша", price: 45 }];
 
-     getAppleInfo=()=>this
+    getAppleInfo = () => this.fruits.filter((el) => el.title === 'яблоко');
+
 }
+
+const apple_22 = new Apple_22();
+console.log(apple_22.getAppleInfo());
