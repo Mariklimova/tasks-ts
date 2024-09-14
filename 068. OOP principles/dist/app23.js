@@ -2,13 +2,6 @@
 // isValidDate(), isValidPath(). Создайте класс Validation, который реализует интерфейс iValidation.
 // Класс будет иметь публичные методы: isValidEmail(), isValidDate(), isValidPath(). Конструктор класса
 // Validation должен принимать параметры email, date, path и инициализировать их как поля класса.
-// 5. Создайте абстрактный класс Fruit (Фрукт) со следующим полем:
-// • fruits: массив объектов, где каждый объект имеет свойства id, title
-// (название) и price (цена)
-// Затем создайте дочерний класс Apple (Яблоко), который наследует
-// Fruit. В классе Apple реализуйте метод getAppleInfo(), который должен
-// возвращать информацию о яблоке из массива fruits, где title равно
-// "яблоко".
 // Входные:
 // let validation = new Validation('example@mail.com',
 // '2023-09-10', '/usr/local/bin');
@@ -19,3 +12,20 @@
 // 10', '/usr/local/bin');
 // validation.isValidEmail();
 // → Результат: false
+class Validation_23 {
+    mail;
+    date;
+    path;
+    constructor(mail, date, path) {
+        this.mail = mail;
+        this.date = date;
+        this.path = path;
+    }
+    isValidEmail = () => /^[\w]+\@[a-z]+\.[a-z]{2,5}$/gm.test(this.mail);
+    isValidDate = () => /^\d{4}\-\d{2}\-\d{2}/gm.test(this.date);
+    isValidPath = () => /^\/[a-z\/]+/gm.test(this.path);
+}
+const validation_23 = new Validation_23('example@mail.com', '2023-09-10', '/usr/local/bin');
+console.log(validation_23.isValidEmail());
+console.log(validation_23.isValidDate());
+console.log(validation_23.isValidPath());

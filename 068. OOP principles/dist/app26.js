@@ -2,28 +2,19 @@
 // будет содержать метод showPwd, возвращающий случайно сгенерированный пароль из 8 цифр.
 // Создайте класс Validation, который наследуется от Pwd и переопределяет метод showPwd,
 // вызывая метод родительского класса через super и дополняя его выводом результата в консоль.
-
-interface iPwd {
-    showPwd(): string
-}
-
 class Pwd_26 {
-
-    showPwd(): string {
-        let password: string = '';
+    showPwd() {
+        let password = '';
         for (let i = 0; i < 8; i++) {
-            password += Math.floor(Math.random() * 9)
+            password += Math.floor(Math.random() * 9);
         }
-        return password
+        return password;
     }
 }
-
 class Validation_26 extends Pwd_26 {
-    override showPwd(): string {
-        return super.showPwd()
+    showPwd() {
+        return super.showPwd();
     }
 }
-
 const validation_26 = new Validation_26();
 console.log(validation_26.showPwd());
-
